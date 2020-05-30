@@ -1,25 +1,24 @@
-# 
-### 五斗米
 
 
 
 
 
-![](./图片/行测模块时长分配（建议）.png)
 
 
 
 
 
-![](./图片/公考准备.jpg)
+
+
+
+
+###	别人总结的知识导图（粉笔系，仅供参考）
+
+
 
 
 
 ![](https://hera-webapp.fbstatic.cn/api/picture/download/412767317687296.jpeg)
-
-
-
-
 
 ![](https://hera-webapp.fbstatic.cn/api/picture/download/412767318212608.jpeg)
 
@@ -29,10 +28,6 @@
 
 ![](https://hera-webapp.fbstatic.cn/api/picture/download/412767319784448.jpeg)
 
-![](https://hera-webapp.fbstatic.cn/api/picture/download/416846437225472.jpeg?width=360&height=360)
-
 ![]()
-
-
 
 ![](https://hera-webapp.fbstatic.cn/api/picture/download/412767317163008.jpeg)
