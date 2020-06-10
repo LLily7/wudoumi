@@ -22,11 +22,9 @@
 
 ![](./图片/公考准备.jpg)
 
-
+**[笑与君歌十二笙行测&申论笔记](https://pan.baidu.com/s/1BZ1zkXrRPMrbSkr6tc-mHw)密码:4mii**
 
 ###	别人总结的知识导图（粉笔系，仅供参考）
-
-
 
 
 
