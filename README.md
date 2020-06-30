@@ -8,7 +8,7 @@
 
 
 
-
+####	tips：直接在你github地址中的html文件前面加上`http://htmlpreview.github.com/?`可实现html在线预览
 
 
 
