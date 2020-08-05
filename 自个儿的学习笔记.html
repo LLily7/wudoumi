@@ -1,0 +1,755 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>自个儿的学习笔记</title><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; tab-size: 4; background-position: inherit inherit; background-repeat: inherit inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+@media screen and (max-width: 500px) { 
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
+.CodeMirror-linenumber { }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit inherit; background-repeat: inherit inherit; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; background-position: 0px 0px; background-repeat: initial initial; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print { 
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; overflow-x: hidden; background-position: initial initial; background-repeat: initial initial; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) { 
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background-color: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; background-position: initial initial; background-repeat: initial initial; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; }
+a.md-print-anchor { white-space: pre !important; border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; text-shadow: initial !important; background-position: 0px 0px !important; background-repeat: initial initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom-width: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+svg[id^="mermaidChart"] { line-height: 1em; }
+mark { background-color: rgb(255, 255, 0); color: rgb(0, 0, 0); background-position: initial initial; background-repeat: initial initial; }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+
+
+.CodeMirror { height: auto; }
+.CodeMirror.cm-s-inner { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit inherit; background-repeat: inherit inherit; }
+.CodeMirror-scroll { overflow: auto hidden; z-index: 3; }
+.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color: rgb(255, 255, 255); }
+.CodeMirror-gutters { border-right-width: 1px; border-right-style: solid; border-right-color: rgb(221, 221, 221); background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; white-space: nowrap; background-position: inherit inherit; background-repeat: inherit inherit; }
+.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
+.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
+.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
+.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
+.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-variable { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
+.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
+.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
+.cm-s-inner .cm-property { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
+.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
+.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
+.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
+.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
+.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
+.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
+.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
+.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
+.cm-negative { color: rgb(221, 68, 68); }
+.cm-positive { color: rgb(34, 153, 34); }
+.cm-header, .cm-strong { font-weight: 700; }
+.cm-del { text-decoration: line-through; }
+.cm-em { font-style: italic; }
+.cm-link { text-decoration: underline; }
+.cm-error { color: red; }
+.cm-invalidchar { color: red; }
+.cm-constant { color: rgb(38, 139, 210); }
+.cm-defined { color: rgb(181, 137, 0); }
+div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
+.cm-s-inner .CodeMirror-activeline-background { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit inherit; background-repeat: inherit inherit; }
+.CodeMirror { position: relative; overflow: hidden; }
+.CodeMirror-scroll { height: 100%; outline: 0px; position: relative; box-sizing: content-box; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit inherit; background-repeat: inherit inherit; }
+.CodeMirror-sizer { position: relative; }
+.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-vscrollbar { position: absolute; z-index: 6; display: none; }
+.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow: hidden; }
+.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow: hidden; }
+.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 30px; z-index: 3; }
+.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
+.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; border: none !important; background-position: 0px 0px !important; background-repeat: initial initial !important; }
+.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; z-index: 4; }
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+.CodeMirror-lines { cursor: text; }
+.CodeMirror pre { border-top-left-radius: 0px; border-top-right-radius: 0px; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px; border-width: 0px; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; word-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; background-position: 0px 0px; background-repeat: initial initial; }
+.CodeMirror-wrap pre { word-wrap: break-word; white-space: pre-wrap; word-break: normal; }
+.CodeMirror-code pre { border-right-width: 30px; border-right-style: solid; border-right-color: transparent; width: fit-content; }
+.CodeMirror-wrap .CodeMirror-code pre { border-right-style: none; width: auto; }
+.CodeMirror-linebackground { position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; z-index: 0; }
+.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
+.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
+.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
+.CodeMirror-measure pre { position: static; }
+.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right-style: none; width: 0px; }
+.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
+.cm-searching { background-color: rgba(255, 255, 0, 0.4); background-position: initial initial; background-repeat: initial initial; }
+@media print { 
+  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+}
+
+
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Source Sans Pro SemiBold'), local('SourceSansPro-SemiBold'), url('file:///Users/zhangjie/Library/Application%20Support/abnerworks.Typora/themes/vue/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwlxdu.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}@import '';
+
+:root {
+    --side-bar-bg-color: #fff;
+    --control-text-color: #777;
+    /* --font-sans-serif: 'Ubuntu', 'Source Sans Pro', sans-serif !important; */
+    --font-sans-serif: '华文楷体', 'Source Sans Pro', sans-serif !important;
+    --font-monospace: 'Fira Code', 'Roboto Mono', monospace !important;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-sans-serif);
+    color: #34495e;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.6rem;
+    letter-spacing: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+#write {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 20px 30px 100px;
+}
+
+#write p {
+    line-height: 1.6rem;
+    word-spacing: .05rem;
+}
+
+#write ol li {
+    padding-left: 0.5rem;
+}
+
+#write > ul:first-child,
+#write > ol:first-child {
+    margin-top: 30px;
+}
+
+body > *:first-child {
+    margin-top: 0 !important;
+}
+
+body > *:last-child {
+    margin-bottom: 0 !important;
+}
+
+a {
+    color: #42b983;
+    font-weight: 600;
+    padding: 0 2px;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+
+h1 tt,
+h1 code {
+    font-size: inherit !important;
+}
+
+h2 tt,
+h2 code {
+    font-size: inherit !important;
+}
+
+h3 tt,
+h3 code {
+    font-size: inherit !important;
+}
+
+h4 tt,
+h4 code {
+    font-size: inherit !important;
+}
+
+h5 tt,
+h5 code {
+    font-size: inherit !important;
+}
+
+h6 tt,
+h6 code {
+    font-size: inherit !important;
+}
+
+h2 a,
+h3 a {
+    color: #34495e;
+}
+
+h1 {
+    padding-bottom: .4rem;
+    font-size: 2.2rem;
+    line-height: 1.3;
+}
+
+h2 {
+    font-size: 1.75rem;
+    line-height: 1.225;
+    margin: 35px 0 15px;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid #ddd;
+}
+
+h3 {
+    font-size: 1.4rem;
+    line-height: 1.43;
+    margin: 20px 0 7px;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+h6 {
+    font-size: 1rem;
+    color: #777;
+}
+
+p,
+blockquote,
+ul,
+ol,
+dl,
+table {
+    margin: 0.8em 0;
+}
+
+li > ol,
+li > ul {
+    margin: 0 0;
+}
+
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+body > h2:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h1:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h3:first-child,
+body > h4:first-child,
+body > h5:first-child,
+body > h6:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+a:first-child h1,
+a:first-child h2,
+a:first-child h3,
+a:first-child h4,
+a:first-child h5,
+a:first-child h6 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+h1 p,
+h2 p,
+h3 p,
+h4 p,
+h5 p,
+h6 p {
+    margin-top: 0;
+}
+
+li p.first {
+    display: inline-block;
+}
+
+ul,
+ol {
+    padding-left: 30px;
+}
+
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+
+blockquote {
+    border-left: 4px solid #42b983;
+    padding: 10px 15px;
+    color: #777;
+    background-color: rgba(66, 185, 131, .1);
+}
+
+table {
+    padding: 0;
+    word-break: initial;
+}
+
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+
+table tr:nth-child(2n),
+thead {
+    background-color: #fafafa;
+}
+
+table tr th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+}
+
+table tr td {
+    border: 1px solid #dfe2e5;
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+}
+
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+#write strong {
+    padding: 0 1px;
+}
+
+#write em {
+    padding: 0 5px 0 2px;
+}
+
+#write table thead th {
+    background-color: #f2f2f2;
+}
+
+#write .CodeMirror-gutters {
+    border-right: none;
+}
+
+#write .md-fences {
+    border: 1px solid #F4F4F4;
+    -webkit-font-smoothing: initial;
+    margin: 0.8rem 0 !important;
+    padding: 0.3rem 0 !important;
+    line-height: 1.43rem;
+    background-color: #F8F8F8 !important;
+    border-radius: 2px;
+    font-family: var(--font-monospace);
+    font-size: 0.85rem;
+    word-wrap: normal;
+}
+
+#write .CodeMirror-wrap .CodeMirror-code pre {
+    padding-left: 12px;
+}
+
+#write code, tt {
+    padding: 2px 4px;
+    border-radius: 2px;
+    font-family: var(--font-monospace);
+    font-size: 0.92rem;
+    color: #e96900;
+    background-color: #f8f8f8;
+}
+
+tt {
+    margin: 0 2px;
+}
+
+#write .md-footnote {
+    background-color: #f8f8f8;
+    color: #e96900;
+}
+
+/* heighlight. */
+#write mark {
+    background-color: #EBFFEB;
+    border-radius: 2px;
+    padding: 2px 4px;
+    margin: 0 2px;
+    color: #222;
+    font-weight: 500;
+}
+
+#write del {
+    padding: 1px 2px;
+}
+
+.cm-s-inner .cm-link,
+.cm-s-inner.cm-link {
+    color: #22a2c9;
+}
+
+.cm-s-inner .cm-string {
+    color: #22a2c9;
+}
+
+.md-task-list-item > input {
+    margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+    background-color: #f8f8f8;
+}
+
+#write pre.md-meta-block {
+    padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block > .code-tooltip {
+    bottom: .375rem;
+}
+
+#write > h3.md-focus:before {
+    left: -1.5625rem;
+    top: .375rem;
+}
+
+#write > h4.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+
+#write > h5.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+
+#write > h6.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+
+.md-image > .md-meta {
+    border-radius: 3px;
+    font-family: var(--font-monospace);
+    padding: 2px 0 0 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: inherit;
+}
+
+.md-toc {
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+#md-notification:before {
+    top: 10px;
+}
+
+/** focus mode */
+
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header,
+.context-menu,
+.megamenu-content,
+footer {
+    font-family: var(--font-sans-serif);
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state {
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+
+
+ .typora-export li, .typora-export p, .typora-export,  .footnote-line {white-space: normal;} 
+</style>
+</head>
+<body class='typora-export' >
+<div  id='write'  class = ''><p>&nbsp;</p><p>&nbsp;</p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n6"><a class="md-toc-inner" href="#言语">言语</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n7"><a class="md-toc-inner" href="#逻辑填空">逻辑填空</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n8"><a class="md-toc-inner" href="#实词辨析">实词辨析</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n44"><a class="md-toc-inner" href="#成语辨析">成语辨析</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n60"><a class="md-toc-inner" href="#关联词辨析">关联词辨析</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n91"><a class="md-toc-inner" href="#片段阅读">片段阅读</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n92"><a class="md-toc-inner" href="#十五技法">十五技法</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n167"><a class="md-toc-inner" href="#主旨概括">主旨概括</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n228"><a class="md-toc-inner" href="#意图判断">意图判断</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n230"><a class="md-toc-inner" href="#态度观点">态度观点</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n232"><a class="md-toc-inner" href="#细节理解">细节理解</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n234"><a class="md-toc-inner" href="#语句理解">语句理解</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n236"><a class="md-toc-inner" href="#代词指代">代词指代</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n238"><a class="md-toc-inner" href="#标题填入">标题填入</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n240"><a class="md-toc-inner" href="#语句表达">语句表达</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n243"><a class="md-toc-inner" href="#篇章阅读">篇章阅读</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n253"><a class="md-toc-inner" href="#推理">推理</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n255"><a class="md-toc-inner" href="#图形推理">图形推理</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n258"><a class="md-toc-inner" href="#逻辑推理">逻辑推理</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n259"><a class="md-toc-inner" href="#蔡金龙逻辑推理httpswwwbilibilicomvideobv1at411h7hpp11">蔡金龙逻辑推理</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n260"><a class="md-toc-inner" href="#需要在复习了宝典的基础上进行巩固">需要在复习了宝典的基础上，进行巩固</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n450"><a class="md-toc-inner" href="#定义判断">定义判断</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n451"><a class="md-toc-inner" href="#蔡金龙定义判断httpswwwbilibilicomvideobv18t411a7cfp8">蔡金龙定义判断</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n452"><a class="md-toc-inner" href="#结合宝典复习">结合宝典复习</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n525"><a class="md-toc-inner" href="#类比">类比</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n526"><a class="md-toc-inner" href="#逻辑关系">逻辑关系</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n568"><a class="md-toc-inner" href="#语法关系">语法关系</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n582"><a class="md-toc-inner" href="#语义关系">语义关系</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n605"><a class="md-toc-inner" href="#资料">资料<span>	</span></a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n611"><a class="md-toc-inner" href="#数量">数量<span>	</span></a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n618"><a class="md-toc-inner" href="#常识">常识</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n622"><a class="md-toc-inner" href="#申论">申论</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n623"><a class="md-toc-inner" href="#申论全景">申论全景</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n624"><a class="md-toc-inner" href="#万能思维体系">万能思维体系</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n630"><a class="md-toc-inner" href="#申论考试的本质两个关键和根本逻辑">申论考试的本质：两个关键和根本逻辑</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n635"><a class="md-toc-inner" href="#申论的特征">申论的特征</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n642"><a class="md-toc-inner" href="#阅卷规则写作模块）">阅卷规则（写作模块）</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n646"><a class="md-toc-inner" href="#审题5要素">审题5要素</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n654"><a class="md-toc-inner" href="#申论细节------概括问题">申论细节——概括问题</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n655"><a class="md-toc-inner" href="#概括问题的基本技巧">概括问题的基本技巧</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n660"><a class="md-toc-inner" href="#阅读材料技巧">阅读材料技巧</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n698"><a class="md-toc-inner" href="#概括问题的标准及技巧">概括问题的标准及技巧</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n732"><a class="md-toc-inner" href="#申论细节------分析问题">申论细节——分析问题</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n733"><a class="md-toc-inner" href="#阐释题">阐释题</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n753"><a class="md-toc-inner" href="#原因分析题">原因分析题</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n769"><a class="md-toc-inner" href="#评价题">评价题</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n797"><a class="md-toc-inner" href="#比较分析">比较分析</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n804"><a class="md-toc-inner" href="#启示类问题">启示类问题</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n808"><a class="md-toc-inner" href="#设喻类问题">设喻类问题</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n812"><a class="md-toc-inner" href="#申论细节------解决问题">申论细节——解决问题</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n814"><a class="md-toc-inner" href="#根据问题找原因">根据问题找原因</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n822"><a class="md-toc-inner" href="#根据原因提对策">根据原因提对策</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n921"><a class="md-toc-inner" href="#根据原则验对策">根据原则验对策</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n937"><a class="md-toc-inner" href="#贯彻执行的基本内容">贯彻执行的基本内容</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n1241"><a class="md-toc-inner" href="#申论写作">申论写作</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n996"><a class="md-toc-inner" href="#其他">其他</a></span></p></div><p>&nbsp;</p><p>&nbsp;</p><h1><a name="言语" class="md-header-anchor"></a><span>言语</span></h1><h2><a name="逻辑填空" class="md-header-anchor"></a><span>逻辑填空</span></h2><h3><a name="实词辨析" class="md-header-anchor"></a><span>实词辨析</span></h3><p><span>可通过提炼文段的</span><strong><span>有效信息</span></strong><span>来排除无关选项或者直接确定答案。如：空白前后出现的词语，文段中多次</span><strong><span>重复出现</span></strong><span>的实词，表达句子之间的逻辑关系的</span><strong><span>关联词</span></strong><span>等</span></p><figure><table><thead><tr><th><span>类型</span></th><th><span>说明</span></th><th><span>示例</span></th></tr></thead><tbody><tr><td><span>感情色彩</span></td><td><span>消极or积极</span></td><td><span>成果、结果、后果</span><br><span>相似、雷同</span><br><span>尝试、冒险</span></td></tr><tr><td><span>语义轻重</span></td><td><span>意义相近的词语在表现程度上有</span><strong><span>程度深浅</span></strong><span>、</span><strong><span>性质轻重</span></strong><span>的区别</span></td><td><span>批判、批评</span><br><span>妨碍、妨害</span><br><span>损坏、破坏</span><br></td></tr><tr><td><span>表达风格</span></td><td><span>语体风格：口语、书面语</span><br><span>文体风格：小说、公文、散文</span></td><td><span>商量、商榷</span><br><span>调节、斡旋</span></td></tr><tr><td><span>语素差异</span></td><td><span>排除两个词语中</span><strong><span>相同的汉字</span></strong><span>的表述，重点观察不同汉字的表述</span><br><span>然后找到每个汉字的基本含义，判断二者语素差异</span></td><td><span>营利、盈利</span><br><span>学历、学力</span></td></tr><tr><td><span>词性功能</span></td><td><span>不同词性的词意义可能相同，但在承担句子成分时的功能却有所不同</span><br><span>通常：</span><br><span>动词后面应该是名词或名词性成分</span><br><span>名词前是形容词</span><br><span>修饰动词的可能是形容词也可能是副词</span></td><td>&nbsp;</td></tr><tr><td><span>搭配范围</span></td><td><span>不同词语有着不同的搭配对象、使用范围</span></td><td><span>期望、希望</span><br><span>爱戴、爱护</span><br><span>伺候、侍候</span></td></tr><tr><td><span>语境信息/限定选项</span></td><td><span>感情色彩、语义轻重、表达风格或者指向含义的具体词语、表逻辑的关联词和标点符号</span></td><td>&nbsp;</td></tr></tbody></table></figure><p>&nbsp;</p><h3><a name="成语辨析" class="md-header-anchor"></a><span>成语辨析</span></h3><p>&nbsp;</p><figure><table><thead><tr><th><span>类别</span></th><th><span>说明</span></th></tr></thead><tbody><tr><td><span>感情色彩</span></td><td><span>褒贬</span></td></tr><tr><td><span>搭配范围</span></td><td><span>谨防语义上的重复累赘、矛盾等</span></td></tr><tr><td><span>句法功能</span></td><td><span>考察成语的句法功能与整句话的需求是否一致（弄清每个成语的具体含义）</span></td></tr></tbody></table></figure><p>&nbsp;</p><h3><a name="关联词辨析" class="md-header-anchor"></a><span>关联词辨析</span></h3><figure><table><thead><tr><th><span>类型</span></th><th><span>说明</span></th></tr></thead><tbody><tr><td><span>并列</span></td><td><span>既...又...</span><br><span>一边...一边...</span><br><span>又...又...</span><br><span>有的...有的...</span><br><span>不是...而是...</span><br><span>一方面...另一方面...</span></td></tr><tr><td><span>承接</span></td><td><span>（首先）...然后...</span><br><span>...便...</span><br><span>...就...</span><br><span>...于是...</span></td></tr><tr><td><span>递进</span></td><td><span>不但...而且...</span><br><span>不仅...还...</span><br><span>不但不...还...</span><br><span>...甚至...</span><br><span>...更...</span></td></tr><tr><td><span>因果</span></td><td><span>因为...所以...</span><br><span>由于...以至于...</span><br><span>由于...因而...</span></td></tr><tr><td><span>转折</span></td><td><span>其实...</span><br><span>实际上...</span><br><span>事实上...</span><br><span>只是...</span><br><span>虽然...但是...</span><br><span>然而...</span><br><span>不过...</span><br><span>却...</span></td></tr><tr><td><span>条件</span></td><td><span>充分：只要...就...、有...就有...、一旦...就...</span><br><span>必要：只有...才...、除非...才...、不...不...、必须...</span><br><span>周遍：不管...也...、不管...都...、无论...也</span><br><span>假设：如果...就...、要是...就...、倘若...则...</span></td></tr><tr><td><span>让步</span></td><td><span>即使...也...</span><br><span>纵然...也...</span><br><span>哪怕...也...</span></td></tr><tr><td><span>取舍</span></td><td><span>宁可...也不...</span><br><span>与其...不如...</span></td></tr></tbody></table></figure><p>&nbsp;</p><p>&nbsp;</p><h2><a name="片段阅读" class="md-header-anchor"></a><span>片段阅读</span></h2><h3><a name="十五技法" class="md-header-anchor"></a><span>十五技法</span></h3><figure><table><thead><tr><th><span>技法</span></th><th><span>概述</span></th><th><span>补充</span></th></tr></thead><tbody><tr><td><span>从文段入手↓</span></td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>分步解题法</span></td><td><span>解题步骤：审题—&gt;读文段—&gt;作答</span></td><td>&nbsp;</td></tr><tr><td><span>替换压缩法</span></td><td><span>正确选项往往为文段内容的</span><strong><span>同义替换</span></strong><span>or</span><strong><span>精简压缩</span></strong></td><td>&nbsp;</td></tr><tr><td><span>成分分析法</span></td><td><span>适用于长句，厘清主谓宾</span></td><td>&nbsp;</td></tr><tr><td><span>背景铺垫法</span></td><td><span>背景非重点。</span></td><td>&nbsp;</td></tr><tr><td><span>表达倾向法</span></td><td><span>文段所表现出的作者倾向（消极、</span></td><td>&nbsp;</td></tr><tr><td><span>援引观点法</span></td><td><span>正向援引or反向援引</span><br><span>援引内容非重点，围绕援引内容的选项为干扰项。</span></td><td>&nbsp;</td></tr><tr><td><span>举例论证法</span></td><td><span>例子非重点，围绕例子的选项为干扰项。</span></td><td>&nbsp;</td></tr><tr><td><span>原因推断法</span></td><td><span>原因非重点（除非特别强调），可快速浏览之，通过原因的位置寻找前后的主题句。</span><br><span>围绕原因的选项为干扰项</span><br><span>阐明原因——引出观点</span><br><span>点明观点——阐明原因</span><br><span>点明观点——阐明原因——重申观点</span></td><td>&nbsp;</td></tr><tr><td><span>反面论证法</span></td><td><span>论证事例非重点。</span></td><td>&nbsp;</td></tr><tr><td><span>标点符号法</span></td><td><span>留意标点的作用。</span><br><span>冒号、破折号：解释说明</span><br><span>分号、顿号：并列关系</span><br><span>双引号：援引观点、强调特称、反语讽刺</span><br><span>括号：补充说明</span><br><span>问号：设问引出话题、反问表达态度倾向、疑问表达不确定（可能带有倾向性）</span></td><td>&nbsp;</td></tr><tr><td><span>指代引导法</span></td><td><span>就近原则</span></td><td>&nbsp;</td></tr><tr><td><span>从选项入手↓</span></td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><strong><span>选项差异法</span></strong></td><td><span>比较各选项之间最大的不同，即强调点何在。</span><br><span>留意动宾短语</span></td><td>&nbsp;</td></tr><tr><td><span>主体排除法</span></td><td><span>选项陈述主体须与文段陈述主体一致</span><br><span>主体偷换者为干扰项</span></td><td>&nbsp;</td></tr><tr><td><span>排同求异法</span></td><td><span>排同：若出现两个几乎相同的选项，则答案大概率不在其中</span><br><span>求异：在讨论话题与原文一致的前提下，答案很可能在一对互相矛盾的选项中</span></td><td>&nbsp;</td></tr><tr><td><span>相对绝对法</span></td><td><span>（适用于实在来不及看文段时）较绝对的说法不是正确选项</span><br><span>例：完全、任何、绝对、总是、一定等</span><br><span>在干扰项中表现为偷换语气</span></td><td>&nbsp;</td></tr></tbody></table></figure><p>&nbsp;</p><h3><a name="主旨概括" class="md-header-anchor"></a><span>主旨概括</span></h3><p><font color=#cd5a4b><span>突破一：微观角度，从关联词切入</span></font></p><figure><table><thead><tr><th><span>关联</span></th><th><span>内容</span></th><th><span>补充</span></th></tr></thead><tbody><tr><td><span>转折</span></td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>结论</span></td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>递进</span></td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>必要条件</span></td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>并列</span></td><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table></figure><p><font color=#cd5a4b><span>突破二：宏观角度，从</span><strong><span>行文脉络</span></strong><span>切入</span></font></p><figure><table><thead><tr><th><span>类型</span></th><th><span>内容</span></th><th><span>补充</span></th></tr></thead><tbody><tr><td><span>总—分—总</span></td><td><span>提出问题—分析问题—解决问题</span><br><span>提出观点—解释说明—重申观点</span><br></td><td>&nbsp;</td></tr><tr><td><span>总—分</span></td><td><span>提出观点—解释说明</span><br><span>提出观点—举例论证</span></td><td>&nbsp;</td></tr><tr><td><span>分—总</span></td><td><span>列举现象—提出观点</span><br><span>列举现象—解决问题</span></td><td>&nbsp;</td></tr><tr><td><span>分—总—分</span></td><td><span>阐释现状or北京铺垫——观点对策——举例论证or解释说明or反面论证</span></td><td>&nbsp;</td></tr></tbody></table></figure><p><font color=#cd5a4b><span>突破三：从整体概括入手，从关键词切入</span></font></p><figure><table><thead><tr><th><span>类型</span></th><th><span>说明</span></th></tr></thead><tbody><tr><td><span>重现关键词</span></td><td><span>文段关键词在选项中出现。在文段中重复出现是关键词的标志之一。</span></td></tr><tr><td><span>整体概括法</span></td><td><span>当文中没有明显关联词，也没有典型的行文脉络，无法提炼关键词——理解文段，整体概括</span></td></tr></tbody></table></figure><p>&nbsp;</p><h3><a name="意图判断" class="md-header-anchor"></a><span>意图判断</span></h3><p>&nbsp;</p><h3><a name="态度观点" class="md-header-anchor"></a><span>态度观点</span></h3><p>&nbsp;</p><h3><a name="细节理解" class="md-header-anchor"></a><span>细节理解</span></h3><p>&nbsp;</p><h3><a name="语句理解" class="md-header-anchor"></a><span>语句理解</span></h3><p>&nbsp;</p><h3><a name="代词指代" class="md-header-anchor"></a><span>代词指代</span></h3><p>&nbsp;</p><h3><a name="标题填入" class="md-header-anchor"></a><span>标题填入</span></h3><p>&nbsp;</p><h2><a name="语句表达" class="md-header-anchor"></a><span>语句表达</span></h2><p>&nbsp;</p><p>&nbsp;</p><h2><a name="篇章阅读" class="md-header-anchor"></a><span>篇章阅读</span></h2><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><h1><a name="推理" class="md-header-anchor"></a><span>推理</span></h1><p>&nbsp;</p><h2><a name="图形推理" class="md-header-anchor"></a><span>图形推理</span></h2><p>&nbsp;</p><p>&nbsp;</p><h2><a name="逻辑推理" class="md-header-anchor"></a><span>逻辑推理</span></h2><h3><a name="蔡金龙逻辑推理httpswwwbilibilicomvideobv1at411h7hpp11" class="md-header-anchor"></a><a href='https://www.bilibili.com/video/BV1At411h7hp?p=11'><span>蔡金龙逻辑推理</span></a></h3><h4><a name="需要在复习了宝典的基础上进行巩固" class="md-header-anchor"></a><span>需要在复习了宝典的基础上，进行巩固</span></h4><ul><li><p><span>逻辑判断</span></p><ul><li><p><span>三项基本原则</span></p><ul><li><span>条件为真原则：陈述假设是正确的，不容置疑的</span></li><li><span>头脑清空原则：不需要添加任何附加说明</span></li><li><span>答案最优原则：选择最优答案</span></li></ul></li><li><p><span>基本题型</span></p><ul><li><p><span>推理</span></p><ul><li><span>翻译推理：给出很多”如果...&quot;、&quot;...那么...&quot;、&quot;...才&quot;之类的句子，要求推出一个结论</span></li><li><span>真假推理：给出很多”如果...&quot;、&quot;...那么...&quot;、&quot;...才&quot;之类的句子，结尾给出“以上只有一/两个是真/假的，要求推出结论</span></li><li><span>分析推理：完成张三李四王五之间医生律师教师身份的匹配，即完成二元或三元之间的信息匹配，排列组合之类</span></li><li><span>归纳推理：根据上述材料可以推出...、无法推出...</span></li></ul></li><li><p><span>论证</span></p><ul><li><span>观点类论证：强调因果性的论证，”若A则B，若B则C，那么A则C“，考察观点之间的因果传递。分为单观点和双观点</span></li><li><span>现象类论证：侧重相关性的考察，如A现象和B现象是否可以通过对比、类比或其他方法得出一些结论，在得到结论的过程中进行加强或削弱</span></li></ul></li></ul></li></ul></li></ul><p>&nbsp;</p><ul><li><p><span>翻译推理</span></p><ul><li><span>题型：单句翻译、复句翻译</span></li><li><span>假言命题——充分条件：若A则B，A —&gt; B，肯前肯后，否后否前</span></li><li><span>假言命题——必要条件：只有A才B，B—&gt;A，否前否后，肯后肯前</span></li><li><span>选言命题——或者A，或者B，否定一个，推出另一个</span></li><li><span>联言命题——A且B</span></li><li><span>作业：公众号”蔡金龙“发送ZY4101、ZY4102、ZY4103、ZY4104</span></li></ul></li></ul><p>&nbsp;</p><ul><li><p><span>真假推理：从·给定的若干个条件中推理出正确/错误的内容</span></p><ul><li><p><span>矛盾关系</span></p><ul><li><span>A：-A</span></li><li><span>A且B：-A或-B</span></li><li><span>A或B： -A且-B</span></li><li><span>所有：有的不</span></li><li><span>A—&gt;B: A且-B</span></li></ul></li><li><p><span>反对关系（和矛盾关系不一样，矛盾是两者不可并存）</span></p></li><li><p><span>包容关系</span></p></li><li><p><span>作业：公众号”蔡金龙“发送ZY4201、ZY4202</span></p></li></ul></li></ul><p>&nbsp;</p><ul><li><p><span>分析推理</span></p><ul><li><p><span>方法：</span></p><ul><li><span>选项信息充分用排除法</span></li><li><span>题干信息充分则最大信息优先（言多必失，题干中提到谁最多就利用谁进行判别）</span></li></ul></li><li><p><span>作业：公众号”蔡金龙“发送ZY4301、ZY4302</span></p></li></ul></li></ul><p>&nbsp;</p><ul><li><p><span>归纳推理</span></p><ul><li><span>题型一：可以推出（类似于言语的主旨概括）</span></li><li><span>题型二：不能推出（类似于言语的细节理解）</span></li><li><span>要点：确定主题词，排除无关项。干扰选项：强加比较、主体不当（范围扩大或缩小）、无由猜测（添加无关概念、偷换概念）</span></li><li><span>作业：公众号”蔡金龙“发送ZY4401、ZY4402</span></li></ul></li></ul><p>&nbsp;</p><ul><li><p><span>单观点</span></p><ul><li><p><span>加强</span></p><ul><li><span>举例子（旁人不行）</span></li><li><span>作比较（没我不行）</span></li></ul></li><li><p><span>削弱</span></p><ul><li><span>矛盾命题</span></li></ul></li><li><p><span>作业：公众号”蔡金龙“发送ZY5101、ZY5102</span></p></li></ul></li></ul><p>&nbsp;</p><ul><li><p><span>双观点</span></p><ul><li><span>加强：搭桥</span></li><li><span>削弱：-A或A且-B</span></li><li><span>作业：公众号”蔡金龙“发送ZY5103、ZY5104</span></li></ul></li></ul><p>&nbsp;</p><ul><li><p><span>类比试验</span></p><ul><li><span>加强：典型</span></li><li><span>削弱：非典型</span></li><li><span>作业：公众号”蔡金龙“发送ZY5201</span></li></ul></li></ul><p>&nbsp;</p><ul><li><p><span>对比实验</span></p><ul><li><span>加强：无他因</span></li><li><span>削弱：有他因</span></li></ul></li></ul><p>&nbsp;</p><ul><li><p><span>现象共变</span></p><ul><li><p><span>加强：存在关联</span></p><ul><li><span>AB相关（A通过B关联C）</span></li></ul></li><li><p><span>削弱：因果倒置</span></p></li><li><p><span>作业：公众号”蔡金龙“发送ZY5203</span></p></li></ul></li></ul><p>&nbsp;</p><ul><li><p><span>数据比例</span></p><ul><li><span>加强削弱：配分母（分母大小决定削弱or加强）</span></li><li><span>作业：公众号”蔡金龙“发送ZY5204</span></li></ul></li></ul><p>&nbsp;</p><ul><li><p><span>原因解释</span></p><ul><li><p><span>解释原因：定义判断</span></p></li><li><p><span>解释多因：无关项</span></p></li><li><p><span>解释矛盾：搭设桥梁</span></p></li><li><p><span>作业：公众号”蔡金龙“发送ZY5301、ZY5302、ZY5303</span></p><p>&nbsp;</p></li></ul></li></ul><h2><a name="定义判断" class="md-header-anchor"></a><span>定义判断</span></h2><h3><a name="蔡金龙定义判断httpswwwbilibilicomvideobv18t411a7cfp8" class="md-header-anchor"></a><a href='https://www.bilibili.com/video/BV18t411a7CF?p=8'><span>蔡金龙定义判断</span></a></h3><h4><a name="结合宝典复习" class="md-header-anchor"></a><span>结合宝典复习</span></h4><p><font color=#cd5a4b><span>解题要点：审题—&gt;读材料，抓关键词</span></font></p><ul><li><p><span>名词型关键词</span></p><ul><li><span>例子：我把张三打了一顿</span></li><li><span>主体（我）</span></li><li><span>客体（张三）</span></li><li><span>属（行为）</span></li><li><span>总结：每读到一个关键词，过滤一遍选项</span></li></ul></li><li><p><span>状语型关键词</span></p><ul><li><span>目的</span></li><li><span>原因</span></li><li><span>时间</span></li></ul></li><li><p><span>题型</span></p><ul><li><p><span>单定义</span></p></li><li><p><span>多定义</span></p><ul><li><span>1个大定义切成2个小定义，问“属于/不属于”大定义——考察多要件关系（和、或）</span><a href='http://v.huatu.com/tiku/searchquestion?keyword=&quot;翻异别勘&quot;是宋代为防止冤假错案而规定的复审制度&amp;isRecommend=0&amp;isHistory=0'><span>例题</span></a></li><li><span>1个大定义切成2个小定义，问“属于/不属于”其中1个小定义——留意多定义之间是否杂糅</span><a href='http://v.huatu.com/tiku/searchquestion?keyword=&quot;翻异别勘&quot;是宋代为防止冤假错案而规定的复审制度&amp;isRecommend=0&amp;isHistory=0'><span>例题</span></a></li><li><a href='http://v.huatu.com/tiku/searchquestion?keyword=小吴经常无根据地夸大自己的成就和才干&amp;isRecommend=0&amp;isHistory=0'><span>多定义匹配</span></a></li></ul></li></ul></li></ul><p>&nbsp;</p><p><font color=#cd5a4b><span>要件关系：</span></font></p><p><span>和——缺一不可</span></p><p><font color=#cd5a4b><span>要件关系：</span></font></p><p><span>和——缺一不可，往往以顿号连接</span></p><blockquote><p><span>	</span><span>动物福利指的是尊重动物的权利</span><strong><span>、</span></strong><span>保护生态环境，促进人与动物协调发展。动物福利主要包括：生理福利，即无饥渴之忧虑；环境福利，即让动物有适当的居所；卫生福利，即尽量减少动物的伤病；行为福利，即保证动物表达天性的自由；心理福利，即减少动物恐惧和焦虑的心情。</span><a href='http://v.huatu.com/tiku/searchquestion?keyword=动物福利指的是尊重动物的权利&amp;isRecommend=0&amp;isHistory=0'><span>例题</span></a></p></blockquote><p><span>或——至少满足其一</span></p><blockquote><p><span>	</span><span>偶然音乐是指音乐家在创作中将偶然性因素引入创造过程</span><strong><span>或</span></strong><span>演奏过程的一种音乐形式。具体方法包括：谱写作品时采用随意手法，允许演奏者进行没有任何提示的即兴演奏，甚至以改造乐器</span><strong><span>或</span></strong><span>加入场外声响来演奏曲目。</span><a href='http://v.huatu.com/tiku/searchquestion?keyword=偶然音乐是指&amp;isRecommend=0&amp;isHistory=0'><span>例题</span></a></p></blockquote><p><span>等——还有其他表现</span></p><blockquote><p><span>	</span><span>沉默行为是指面对管理制度或生产活动</span><strong><span>等</span></strong><span>方面的隐患，为了避免人际冲突，害怕遭受打击报复或维护自身脸面等原因而有意保留自己想法的行为。</span><a href='http://v.huatu.com/tiku/searchquestion?keyword=沉默行为是指面对管理制度或生产活动等方面的隐患&amp;isRecommend=0&amp;isHistory=0'><span>例题</span></a></p></blockquote><p>&nbsp;</p><p><font color=#cd5a4b><span>做题方法：</span></font></p><ul><li><p><span>圈出关键词，信息量排名靠前的关键词优先级高</span></p><ul><li><p><span>信息量排名最靠前：</span><strong><span>名词</span></strong><span>型关键词（名词：主体、客体、属）</span></p></li><li><p><span>每读到一个关键词刷一遍选项（过滤符合/不符合的）</span></p></li><li><p><span>信息量第二：</span><strong><span>状语</span></strong></p><ul><li><span>为了....（目的状语）</span></li><li><span>在...时，在...前，在...后（时间状语）</span></li><li><span>由于...，因...（原因状语）</span></li></ul></li></ul></li><li><p><span>“最符合”“最不符合”类题，若时间来不及，优先做后者。因为：定义判断不是选择哪项最好，而是排除不好的三项。</span></p></li></ul><h2><a name="类比" class="md-header-anchor"></a><span>类比</span></h2><h3><a name="逻辑关系" class="md-header-anchor"></a><span>逻辑关系</span></h3><figure><table><thead><tr><th><span>关系类型</span></th><th><span>含义</span></th><th><span>示例</span></th></tr></thead><tbody><tr><td><span>同一</span></td><td><span>两个概念的含义完全相同</span></td><td><span>诗人：骚人</span><br><span>男子：须眉</span></td></tr><tr><td><span>包含</span></td><td><span>真包含关系，逻辑上也叫属种关系</span></td><td><span>家具：橱柜</span><br><span>家禽：鸭子</span></td></tr><tr><td><span>分解</span></td><td><span>部分和整体的关系</span></td><td><span>地球：北极</span><br><span>书本：封面</span></td></tr><tr><td><span>交叉</span></td><td><span>两个概念的外延存在交集</span><br><span>有些A是B，有些B是A</span></td><td><span>指挥家：钢琴家</span><br><span>科学家：教授</span></td></tr><tr><td><span>对称</span></td><td><span>一个事物与另一个事物唯一互相对应的关系，或称一一对应</span></td><td><span>电脑：鼠标</span><br><span>北京故宫：珍妃井</span></td></tr><tr><td><span>属性对应</span></td><td><span>本质属性：事物的固有属性，具有必然性</span><br><span>非本质属性：只有或然、相关性</span></td><td><span>下雨：路滑</span><br><span>烧水：水增温</span><br></td></tr><tr><td><span>并列</span></td><td><span>在逻辑上叫做反对关系</span><br><span>分为同级并列和非同级并列</span><br><span>同级并列的两个概念的临近属性相同</span></td><td><span>冰箱：电视</span><br><span>他们的临近属性都是“家用电器”</span></td></tr><tr><td><span>充分条件</span><br><span>必要条件</span></td><td><span>逻辑关系</span></td><td><span>肺炎：高烧</span><br><span>酒驾：违法</span></td></tr><tr><td><span>因果反变</span></td><td><span>两个概念之间具有相对相反的关系</span><br><span>通常是对某个特定概念否定后即可形成双方的必然因果联系</span></td><td><span>纪念：忘却</span><br><span>挖掘：埋没</span></td></tr></tbody></table></figure><h3><a name="语法关系" class="md-header-anchor"></a><span>语法关系</span></h3><figure><table><thead><tr><th><span>类型</span></th><th><span>示例</span></th></tr></thead><tbody><tr><td><span>主谓</span></td><td><span>天气晴朗</span><br><span>阳光明媚</span></td></tr><tr><td><span>主宾</span></td><td><span>学生（写）作业</span><br><span>灯塔（引导）航行</span></td></tr><tr><td><span>动宾</span></td><td><span>保持安静</span><br><span>喜欢游泳</span></td></tr></tbody></table></figure><h3><a name="语义关系" class="md-header-anchor"></a><span>语义关系</span></h3><figure><table><thead><tr><th><span>类型</span></th><th><span>含义</span></th><th><span>示例</span></th></tr></thead><tbody><tr><td><span>近义</span></td><td><span>词语意思相近</span></td><td><span>美妙：美好</span><br><span>欢乐：快乐</span></td></tr><tr><td><span>反义</span></td><td><span>词语意思相反</span></td><td><span>高矮</span><br><span>胖瘦</span></td></tr><tr><td><span>象征</span></td><td><span>象征意义</span></td><td><span>喜鹊：喜讯</span><br><span>乌鸦：不吉利</span></td></tr></tbody></table></figure><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><h1><a name="资料" class="md-header-anchor"></a><span>资料</span><span>	</span></h1><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><h1><a name="数量" class="md-header-anchor"></a><span>数量</span><span>	</span></h1><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><h1><a name="常识" class="md-header-anchor"></a><span>常识</span></h1><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><h1><a name="申论" class="md-header-anchor"></a><span>申论</span></h1><h2><a name="申论全景" class="md-header-anchor"></a><span>申论全景</span></h2><h3><a name="万能思维体系" class="md-header-anchor"></a><span>万能思维体系</span></h3><p>&nbsp;</p><p><img src="./图片/万能思维体系.jpeg" referrerpolicy="no-referrer"></p><p>&nbsp;</p><p><span>万能体系思维导图主要用于归纳、对照材料&amp;答案检查自己是否有遗漏重要得分点。</span></p><blockquote><p><strong><span>实务维度</span></strong></p><ul><li><p><span>主体</span></p><ul><li><p><span>构成：政府、企业、民众</span></p></li><li><p><span>方面：</span></p><ul><li><p><span>利益</span></p><ol><li><span>经济利益——钱</span></li><li><span>政治利益——权力与权利</span></li><li><span>文化利益——精神需要</span></li><li><span>民生利益——生活需要</span></li><li><span>生态利益</span></li></ol></li><li><p><span>思想：理念、意识、常识、知识</span></p></li><li><p><span>素质</span></p><ol><li><span>业务素质</span></li><li><span>思想道德素质</span></li><li><span>心理素质</span></li><li><span>身体素质</span></li></ol></li></ul></li></ul></li><li><p><span>技术</span></p><ul><li><p><span>硬技术</span></p><ul><li><span>技术手段、技术路径</span></li><li><span>人——干部、队伍、人才、编制</span></li><li><span>财——财政、贷款、民间资本</span></li><li><span>物——设备、设施（基础设施和配套设施）</span></li></ul></li><li><p><span>软技术：管理手段、方式、流程</span></p></li></ul></li><li><p><span>制度</span></p><ul><li><p><span>非正式制度：风俗、习惯</span></p></li><li><p><span>正式制度</span></p><ul><li><span>规则——静态制度</span></li><li><span>机制——系统制度的应用</span></li><li><span>体制（政策）：规则与机制的统称</span></li></ul></li></ul></li><li><p><span>环境</span></p><ul><li><span>自然地理环境</span></li><li><span>社会人文环境</span></li></ul></li></ul><p><strong><span>时间维度</span></strong></p><ul><li><p><span>微观：事前、事中、事后</span></p></li><li><p><span>宏观</span></p><ul><li><span>过去、历史、传统</span></li><li><span>现在、现状、现代</span></li><li><span>未来、将来</span></li></ul></li></ul><p><strong><span>空间维度</span></strong></p><ul><li><p><span>物理空间</span></p><ul><li><span>本地、外国、民族</span></li><li><span>外地、外国、世界</span></li></ul></li><li><p><span>思维空间</span></p><ul><li><span>内因</span></li><li><span>外因</span></li></ul></li></ul><p><strong><span>价值维度</span></strong></p><ul><li><span>利——积极、成绩、意义、经验</span></li><li><span>弊——消极、问题、危害、教训</span></li></ul></blockquote><p>&nbsp;</p><h3><a name="申论考试的本质两个关键和根本逻辑" class="md-header-anchor"></a><span>申论考试的本质：两个关键和根本逻辑</span></h3><blockquote><p><span>本质：考察公务员在实际工作中发现问题、分析问题、解决问题的能力。</span></p><p><span>申：申明或阐明特定事实（表现、原因、对策）——简记为BYD比亚迪</span></p><p><span>论：论证特定事实表现的准确性、原因的针对性和对策的有效性</span></p></blockquote><h3><a name="申论的特征" class="md-header-anchor"></a><span>申论的特征</span></h3><blockquote><p><span>特征：平和、中庸、凝练、沉稳。透、全、实、精</span></p><p><span>透：透过现象看本质</span></p><p><span>全：内容涵盖的</span><strong><span>信息点要全</span></strong><span>——全面概括、</span><strong><span>思维要周全</span></strong><span>——全方位、多角度思考、辩证分析</span></p><p><span>实：充实、真实。立足</span><strong><span>材料</span></strong><span>实际和社会实际</span></p><p><span>精：语言准确精炼，表达规范。（简明精短，避免冗长句）</span></p></blockquote><h3><a name="阅卷规则写作模块）" class="md-header-anchor"></a><span>阅卷规则（写作模块）</span></h3><blockquote><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 12px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">1. 看字数和题目。无题目扣5分。</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">2. 看卷面（字迹清晰工整）</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">3. 看观点：首段观点，每段的首句观点。须明确</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">4. 看结构：看结构是否按照**提出问题、分析问题、解决问题**的套路来的。</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 88px;"></div><div class="CodeMirror-gutters" style="display: none; height: 88px;"></div></div></div></pre></blockquote><p>&nbsp;</p><h3><a name="审题5要素" class="md-header-anchor"></a><span>审题5要素</span></h3><blockquote><p><span>作答任务：题干涉及的特定事实</span></p><p><span>答案来源：根据材料X、结合材料X、材料X中提到.....你如何理解...</span></p><p><span>作答角色：假如你是XX局的一名普通工作人员/XX项目的验收负责人</span></p><p><span>作答体例：即表达形式——报告、提纲、演讲稿、宣传稿、通报</span></p><p><span>细节限制：分层次作答、字数限制</span></p></blockquote><p>&nbsp;</p><h2><a name="申论细节------概括问题" class="md-header-anchor"></a><span>申论细节——概括问题</span></h2><h3><a name="概括问题的基本技巧" class="md-header-anchor"></a><span>概括问题的基本技巧</span></h3><blockquote><p><span>问题意识</span></p><p><span>抽象方面：紧抓表现、原因、对策。搞清材料反映的问题、表现、根源、对策。材料之间的逻辑关系。</span></p><p><span>具体方面：先看问题——&gt;合理预判——&gt;读材料</span></p></blockquote><h3><a name="阅读材料技巧" class="md-header-anchor"></a><span>阅读材料技巧</span></h3><blockquote><p><strong><span>勾画关键词、关键句：</span></strong></p><ol start='' ><li><p><span>首尾句</span></p></li><li><p><span>关联词引导的逻辑关系（尤其转折）</span></p></li><li><p><span>观点性原则</span></p><ul><li><span>专家——辩证分析、取舍</span></li><li><span>政府权威部门——制定政策和验证对策的依据和准绳</span></li><li><span>群众——把握其利益需求</span></li></ul></li><li><p><span>常见词：根源、危害、教育、体制、领导、法制、法规、监督、落实、经验、教训</span></p></li></ol><p><strong><span>将勾画的内容分类：</span></strong></p><ol start='' ><li><p><span>横向原则</span></p><ul><li><span>万能体系：实务、时间、空间、价值维度</span></li><li><span>五位一体：政治、经济、社会、文化、生态维度</span></li></ul></li><li><p><span>纵向原则</span></p><ul><li><span>提出问题——分析问题——解决问题</span></li><li><span>现状、根源、对策</span></li></ul></li><li><p><span>多层次、多角度考虑</span></p></li></ol></blockquote><p>&nbsp;</p><h3><a name="概括问题的标准及技巧" class="md-header-anchor"></a><span>概括问题的标准及技巧</span></h3><blockquote><p><strong><span>标准：</span></strong></p><ul><li><p><span>全面：角色意识+具体内涵的事实性内容和价值性内容</span></p></li><li><p><span>客观准确：基于材料，高于材料。对材料的精简压缩</span></p></li><li><p><span>简明：好的概括=好的连接词+文段关键词</span></p></li><li><p><span>清晰流畅：</span></p><p>&nbsp;</p></li></ul><p><strong><span>技巧：</span></strong></p><ul><li><p><span>综合性概括</span></p><ul><li><p><span>作答体例：概括主要内容、主要信息、情况综述、简报、发言提纲、解说词、倡议书、公开信、政府短文、报纸评论等</span></p></li><li><p><span>作答内容：</span></p><ul><li><span>材料反映的</span><strong><span>问题</span></strong><span>：...</span></li><li><span>问题的</span><strong><span>表现</span></strong><span>：...</span></li><li><span>造成问题的</span><strong><span>原因</span></strong><span>：1....2....3....</span></li><li><span>解决问题的</span><strong><span>对策</span></strong><span>：1....2....3....</span></li></ul></li></ul></li><li><p><span>单一性概括：主要（问题、特点、原因、做法）为：1....2....3.....4.....</span></p></li></ul></blockquote><p>&nbsp;</p><h2><a name="申论细节------分析问题" class="md-header-anchor"></a><span>申论细节——分析问题</span></h2><h3><a name="阐释题" class="md-header-anchor"></a><span>阐释题</span></h3><blockquote><p><strong><span>提问方式：</span></strong></p><ul><li><span>谈谈你对...的理解</span></li><li><span>阐述划线句子...的意思</span></li><li><span>指出这句话的含义</span></li><li><span>文中“....”是什么意思</span></li></ul><p><strong><span>作答：</span></strong></p><ul><li><span>概括：是啥</span></li><li><span>引申：有啥影响、意义、危害</span></li><li><span>观点/对策：对不对、该怎么做、怎么对待</span></li></ul></blockquote><h3><a name="原因分析题" class="md-header-anchor"></a><span>原因分析题</span></h3><blockquote><p><strong><span>过往性分析——现在为啥会这样</span></strong><span>：</span></p><ul><li><span>宏观：五位一体——政治、经济、文化、社会、生态</span></li><li><span>微观：实务维度——利益、思想、素质、制度、技术</span></li></ul><p><strong><span>未来性分析——未来为啥要那样</span></strong><span>：</span></p><ul><li><span>现在问题的严重性，即解决这个问题的</span><strong><span>必要性和迫切性</span></strong></li><li><span>解决该问题的有利形势和条件，即</span><strong><span>可行性</span></strong></li><li><span>解决这个问题的</span><strong><span>重要性</span></strong><span>，即解决此类问题有哪些好处，哪些重要意义</span></li></ul></blockquote><h3><a name="评价题" class="md-header-anchor"></a><span>评价题</span></h3><blockquote><p><strong><span>矛盾问题：</span></strong></p><ol start='' ><li><p><span>优劣势模式</span></p><p><span>两种思路/观点/理念分别是A和B</span></p><p><span>A的积极性表现在..../在....方面存在明显优势，但是在...则存在明显的局限和不足</span></p><p><span>B的积极性表现在..../在....方面存在明显优势，但是在...则存在明显的局限和不足</span></p><p><span>因此，我认为，我们在...方面发挥A的优势，在...方面发挥B的优势，使之相辅相成，相互促进</span></p></li><li><p><span>相互依存模式</span></p><p><span>两种思路/观点/理念分别是A和B</span></p><p><span>A是B的...，没有A，B就会...</span></p><p><span>B是A的...，没有B，A就会...</span></p><p><span>应当把A和B结合起来，在......方面发挥A的优势，在...发挥B的优势，使之相辅相成，相互促进</span></p></li></ol><p><span>热词：分析利弊，谋求平衡</span></p></blockquote><blockquote><p><strong><span>社会现象：</span></strong></p><ol start='' ><li><p><span>多角度看问题</span></p><p><span>申论万能体系：实务、时间、空间、价值</span></p></li><li><p><span>揭示问题，揭示某一事件的本质</span></p></li><li><p><span>落脚解决问题，提出应对办法</span></p></li></ol></blockquote><p>&nbsp;</p><h3><a name="比较分析" class="md-header-anchor"></a><span>比较分析</span></h3><blockquote><p><strong><span>焦点类题目：</span></strong></p><p><span>焦点即争论的集中点。需要有条路地概括材料中争锋相对的观点。（例：2012年4月联考第一题）</span></p><p><strong><span>关系类题目：</span></strong></p><p><span>概括A、B，分析其区别、联系，透过现象看本质。（例：2013国考省级以上第一题）</span></p></blockquote><p>&nbsp;</p><h3><a name="启示类问题" class="md-header-anchor"></a><span>启示类问题</span></h3><blockquote><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 12px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">1. 概括特定事实的经验或教训</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">2. 用对策的形式表达出来</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">3. 分析其中实质</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 66px;"></div><div class="CodeMirror-gutters" style="display: none; height: 66px;"></div></div></div></pre></blockquote><p>&nbsp;</p><h3><a name="设喻类问题" class="md-header-anchor"></a><span>设喻类问题</span></h3><blockquote><p><span>	</span><span>将比喻的概念转化为具有实质意义的概念，并努力揭示其现实意义（例：2010国考省级以上第二题）</span></p></blockquote><p>&nbsp;</p><h2><a name="申论细节------解决问题" class="md-header-anchor"></a><span>申论细节——解决问题</span></h2><p>&nbsp;</p><h3><a name="根据问题找原因" class="md-header-anchor"></a><span>根据问题找原因</span></h3><blockquote><ol start='' ><li><span>根据材料找到特定社会现象的消极、负面影响</span></li><li><span>找存在的问题</span></li></ol><p><span>辩证思维分析——从客观实际（材料内容）出发、发展的眼光、普遍联系</span></p></blockquote><h3><a name="根据原因提对策" class="md-header-anchor"></a><span>根据原因提对策</span></h3><blockquote><p><strong><span>根据原因找对策，如：</span></strong></p><ul><li><span>公共交通不发达——采取措施让公共交通发达起来</span></li><li><span>施行了一系列规定，但是过一阵子就没人认真执行了——建立长效机制、严格监督落实等</span></li></ul><p><strong><span>提出对策的万能八条：</span></strong></p><ol start='' ><li><p><span>领导重视，提高认识</span></p><ul><li><span>实行一把手负责制</span></li><li><span>建立和完善引咎辞职制度</span></li><li><span>建立健全领导问责制度</span></li><li><span>把...纳入议事日程、加强对...的调查研究、从源头上清理...的来龙去脉、增加...意识、倡导...理念、密切关注...</span></li></ul></li><li><p><span>加强宣传，营造氛围</span></p><ul><li><span>通过电视、报纸、网络等媒体进行宣传，提高群众对...的认识</span></li><li><span>舆论关注</span></li><li><span>实行典型示范</span></li><li><span>社会示范</span></li><li><span>在全社会营造...的良好氛围</span></li></ul></li><li><p><span>教育培训，提高素质</span></p><ul><li><span>通过...教育培训，提高广大领导干部/工作人员/人民群众的...素质</span></li></ul></li><li><p><span>健全政策法制，完善制度</span></p><ul><li><span>建立健全各项制度（法律），做到有法可依。如：激励制度、规则制度、决策制度等</span></li></ul></li><li><p><span>组织协调，形成机制</span></p><ul><li><span>建立完善各种监督机制</span></li><li><span>形成信息的反馈机制</span></li><li><span>建立组织机制、协调机制：包括派工作组、成立专门机构、增加人员等</span></li><li><span>建立应急预防机制（编制应急预案，增加人力、物力、财力储备）和保障机制</span></li><li><span>形成深入了解民情、充分反映民意、广泛集中民智、切实珍惜民力的科学决策机制</span></li></ul></li><li><p><span>增加投入，依靠技术</span></p></li><li><p><span>依法监督，全面落实</span></p><ul><li><span>加强社会监督（群众监督），设立举报热线（举报信箱）</span></li><li><span>媒体监督（舆论监督）</span></li><li><span>领导（上级）监督</span></li><li><span>建立完善系统、严格的评价、考核指标体系</span></li><li><span>加大检查/整顿力度（事前、事中、事后全时段，全方位监督整顿）</span></li><li><span>违法必究，执法必严：严厉查处责任人</span></li><li><span>有权必有责，用权受监督</span></li></ul></li><li><p><span>总结反思，节俭经验</span></p><ul><li><span>以前的经验</span></li><li><span>别国（地区）的经验</span></li></ul></li></ol><p>&nbsp;</p><p><strong><span>对策不是越多越好，而是针对性越强越好。要抓住问题的普遍性、突出特殊性</span></strong></p><p>&nbsp;</p><p><strong><span>提出对策五要素：</span></strong></p><ul><li><span>对策实施的主体</span></li><li><span>......对象</span></li><li><span>......方式</span></li><li><span>......步骤</span></li><li><span>......目的或效果</span></li></ul></blockquote><p>&nbsp;</p><h3><a name="根据原则验对策" class="md-header-anchor"></a><span>根据原则验对策</span></h3><blockquote><p><strong><span>对策三大原则</span></strong></p><ol start='' ><li><p><span>针对性</span></p></li><li><p><span>可行性</span></p><ol start='' ><li><span>符合虚拟人物身份</span></li><li><span>符合政府职能，具体可操作</span></li></ol></li><li><p><span>常识性</span></p><p><span>符合社会伦理道德规范、国家法律法规等</span></p></li></ol></blockquote><h3><a name="贯彻执行的基本内容" class="md-header-anchor"></a><span>贯彻执行的基本内容</span></h3><blockquote><p><strong><span>基本原则：</span></strong></p><p><span>依法行政、合理行政、监督行政、程序正当、诚实守信、高效便民</span></p><p>&nbsp;</p><p><strong><span>组织计划的套路</span></strong></p><ol start='' ><li><p><span>纵向时间线索：在时间上做好安排，分阶段、分步骤，理清阶段性问题</span></p></li><li><p><span>横向工作线索</span></p><ol start='' ><li><p><span>强化领导，明确责任。......</span></p></li><li><p><span>培训学习，营造氛围。......</span></p></li><li><p><span>任务分解，明确分工。......</span></p></li><li><p><span>组织协调，依法监督。......</span></p></li><li><p><span>增加投入，依靠技术。......</span></p></li><li><p><span>及时反馈，系统总结。......</span></p><p><span>实施方案（模板）↓</span></p><p><img src="/Users/zhangjie/Desktop/wudoumi/图片/贯彻执行模板.jpeg" referrerpolicy="no-referrer"></p></li></ol></li></ol><p>&nbsp;</p><p><strong><span>化解矛盾冲突的套路：</span></strong></p><ol start='' ><li><span>沟通机制：注重沟通主体、方式、内容、目的</span></li><li><span>妥协机制：平衡利益需要，利益相关方各退一步，而不是全部满足</span></li><li><span>落实机制：加强管理、监督落实妥协方案</span></li></ol><p>&nbsp;</p><p><strong><span>时候解决问题的套路：</span></strong></p><ol start='' ><li><span>追源头</span></li><li><span>溯主体</span></li><li><span>政府统一领导</span></li><li><span>各部门分工负责</span></li><li><span>生产领域查漏洞</span></li><li><span>流通领域要下架</span></li><li><span>控制嫌疑犯罪人</span></li><li><span>彻查失职渎职行为</span></li></ol></blockquote><blockquote><p><strong><span>组织计划实施方案（模板）</span></strong></p><p><span>						</span><span>标题（居中）</span></p><p><span>按照......要求，根据......现就工作制定如下实施方案。</span></p><p><span>一、工作的总体目标和指导原则</span></p><p><span>	</span><span>（一）总体目标......</span></p><p><span>	</span><span>（二）指导原则......</span></p><p><span>二、重点内容</span></p><p><span>	</span><span>（一）......</span></p><p><span>	</span><span>（二）......</span></p><p><span>	</span><span>（三）......</span></p><p><span>三、时间安排</span></p><p><span>	</span><span>（一）第一阶段......</span></p><p><span>	</span><span>（二）第二阶段......</span></p><p><span>四、工作要求</span></p><p><span>	</span><span>（一）强化领导，明确责任。......</span></p><p><span>	</span><span>（二）培训学习，提高素质。......</span></p><p><span>	</span><span>（三）加强宣传，营造氛围。......</span></p><p><span>		</span><span>......&lt;根据情况选取万能八条内容&gt;</span></p><p><span>希望......，进一步推动......（结尾）</span></p></blockquote><p>&nbsp;</p><h2><a name="申论写作" class="md-header-anchor"></a><span>申论写作</span></h2><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><h1><a name="其他" class="md-header-anchor"></a><span>其他</span></h1><ol start='' ><li><span>（尤其行测）视频要反复看，盲目刷题很难突破瓶颈。（刷题+视频，不断发现</span><strong><span>盲点薄弱点</span></strong><span>）</span></li><li><span>申论大作文第一段写好，三个分论点首句写好，末尾强调一下。其他内容写不出来就抄材料。</span></li></ol><p>&nbsp;</p></div>
+</body>
+</html>
