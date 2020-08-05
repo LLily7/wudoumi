@@ -20,7 +20,7 @@
 
 
 
-[自己的学习笔记](http://htmlpreview.github.com/?https://github.com/LLily7/wudoumi/blob/master/自己的学习笔记.html)
+[个人笔记](http://htmlpreview.github.io/?https://github.com/LLily7/wudoumi/blob/master/自己的学习笔记.html)
 
 
 
