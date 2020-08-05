@@ -16,7 +16,7 @@
 
 [2020梅子糖词汇辨析](https://pan.baidu.com/s/1uIuYpB0Xra94VYHk5GS0xA)  **密码: alu5**
 
-
+**[自己的学习笔记](http://htmlpreview.github.com/?https://github.com/LLily7/wudoumi/自己的学习笔记.html)**
 
 
 
