@@ -24,6 +24,18 @@
 
 
 
+[人民时评重要言论库](http://opinion.people.com.cn/GB/8213/49160/49219/)
+
+[半月谈评论](http://www.banyuetan.org/byt/banyuetanpinglun/index.html)
+
+[人民日报](http://www.people.com.cn/)
+
+[光明网](https://www.gmw.cn/)
+
+[新华社](http://www.xinhuanet.com/)
+
+
+
 行测时长分配参考
 
 ![](./图片/行测模块时长分配（建议）.png)
