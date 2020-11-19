@@ -34,6 +34,8 @@
 
 [新华社](http://www.xinhuanet.com/)
 
+[新华网评](http://www.xinhuanet.com/comments/index.htm)
+
 
 
 行测时长分配参考
